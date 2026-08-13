@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="vi">
 <head>
@@ -5,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cloudlet Records | Hãng Âm Nhạc Độc Lập</title>
     
-    <!-- Google Fonts: Inter & Montserrat cho giao diện hiện đại -->
+    <!-- Google Fonts: Raleway cho giao diện hiện đại -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Montserrat:wght@500;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     
     <style>
         :root {
@@ -33,7 +34,8 @@
         }
 
         body {
-            font-family: 'Figtree', sans-serif;
+            font-family: 'Raleway', sans-serif;
+            font-weight: 400; /* Đã đổi từ 300 (Light) sang 400 (Regular) */
             color: var(--dark-text);
             background-color: var(--bg-main);
             line-height: 1.6;
@@ -41,7 +43,8 @@
         }
 
         h1, h2, h3, h4 {
-            font-family: 'Montserrat', sans-serif;
+            font-family: 'Raleway', sans-serif;
+            font-weight: 500; /* Tăng nhẹ độ đậm cho tiêu đề (từ 400 lên 500) để phân biệt rõ hơn với body text (400) */
             color: var(--dark-text);
         }
 
@@ -68,9 +71,9 @@
         }
 
         .logo-text {
-            font-family: 'Montserrat', sans-serif;
+            font-family: 'Raleway', sans-serif;
             font-size: 1.4rem;
-            font-weight: 800;
+            font-weight: 500; /* Tăng độ đậm logo từ 400 lên 500 */
             color: var(--dark-text);
             letter-spacing: -0.5px;
             display: flex;
@@ -93,7 +96,7 @@
         .nav-links a {
             text-decoration: none;
             color: var(--gray-text);
-            font-weight: 600;
+            font-weight: 500; /* Tăng độ đậm link từ 400 lên 500 để dễ nhìn hơn */
             font-size: 0.95rem;
             transition: var(--transition-smooth);
             position: relative;
@@ -152,7 +155,7 @@
 
         .hero h1 {
             font-size: clamp(3rem, 5vw, 5rem);
-            font-weight: 800;
+            font-weight: 500; /* Tăng từ 400 lên 500 cho tiêu đề lớn */
             letter-spacing: -1px;
             margin-bottom: 1.5rem;
             color: white;
@@ -160,7 +163,7 @@
 
         .hero p {
             font-size: 1.25rem;
-            font-weight: 400;
+            font-weight: 400; /* Đổi từ 300 sang 400 (Regular) */
             margin-bottom: 2.5rem;
             opacity: 0.9;
             color: #f1f3f4;
@@ -173,8 +176,8 @@
             padding: 1rem 2.5rem;
             background-color: var(--primary-blue);
             color: white;
-            font-family: 'Figtree', sans-serif;
-            font-weight: 600;
+            font-family: 'Raleway', sans-serif;
+            font-weight: 500; /* Tăng từ 400 lên 500 cho nút */
             font-size: 1rem;
             border-radius: 50px;
             text-decoration: none;
@@ -203,7 +206,7 @@
 
         .section-title {
             font-size: 2.5rem;
-            font-weight: 800;
+            font-weight: 500; /* Tăng từ 400 lên 500 */
             letter-spacing: -0.5px;
             margin-bottom: 1rem;
         }
@@ -257,19 +260,19 @@
             color: var(--primary-blue);
             padding: 4px 12px;
             border-radius: 20px;
-            font-weight: 700;
+            font-weight: 600; /* Tăng từ 500 lên 600 để tag nổi bật hơn */
             margin-bottom: 1rem;
         }
 
         .card-title {
             font-size: 1.5rem;
-            font-weight: 700;
+            font-weight: 500; /* Tăng từ 400 lên 500 */
             margin-bottom: 0.5rem;
         }
 
         .card-artist {
             color: var(--gray-text);
-            font-weight: 500;
+            font-weight: 500; /* Tăng từ 400 lên 500 */
             font-size: 0.95rem;
             margin-bottom: 1rem;
         }
@@ -322,7 +325,8 @@
             border: 1px solid var(--border-color);
             border-radius: 50px; /* Pill shape */
             font-size: 1rem;
-            font-family: 'Figtree', sans-serif;
+            font-family: 'Raleway', sans-serif;
+            font-weight: 400; /* Đổi từ 300 sang 400 (Regular) */
             color: var(--dark-text);
             background-color: var(--bg-card);
             transition: var(--transition-smooth);
@@ -421,7 +425,7 @@
             padding: 12px 24px;
             border-radius: 50px;
             text-decoration: none;
-            font-weight: 700;
+            font-weight: 500; /* Tăng từ 400 lên 500 */
             display: flex;
             align-items: center;
             gap: 8px;
@@ -434,6 +438,55 @@
             box-shadow: 0 4px 12px rgba(255, 0, 0, 0.3);
         }
 
+        /* Video Grid */
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .video-item {
+            background: var(--bg-card);
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+            cursor: pointer;
+            transition: var(--transition-smooth);
+        }
+
+        .video-item:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.08);
+            border-color: var(--primary-blue);
+        }
+
+        .video-thumbnail {
+            width: 100%;
+            aspect-ratio: 16/9;
+            object-fit: cover;
+            background: #e8eaed;
+            display: block;
+        }
+
+        .video-info {
+            padding: 1rem;
+        }
+
+        .video-info h4 {
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            line-height: 1.4;
+        }
+
+        .video-info p {
+            font-size: 0.85rem;
+            color: var(--gray-text);
+        }
+
         /* Footer */
         footer {
             background-color: #202124; /* Xám đậm Google */
@@ -443,9 +496,9 @@
         }
 
         .footer-logo {
-            font-family: 'Montserrat', sans-serif;
+            font-family: 'Raleway', sans-serif;
             font-size: 1.5rem;
-            font-weight: 800;
+            font-weight: 500; /* Tăng từ 400 lên 500 */
             color: white;
             margin-bottom: 1rem;
         }
@@ -465,6 +518,41 @@
 
         .footer-links a:hover {
             color: white;
+        }
+
+        /* Legal Content */
+        .legal-content {
+            max-width: 800px;
+            margin: 0 auto;
+            color: var(--gray-text);
+            text-align: left;
+        }
+
+        .legal-content h3 {
+            color: var(--dark-text);
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .legal-content p {
+            margin-bottom: 1rem;
+            line-height: 1.7;
+        }
+
+        .legal-content ul {
+            margin-left: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .legal-content li {
+            margin-bottom: 0.5rem;
+            line-height: 1.7;
+        }
+
+        .legal-content strong {
+            color: var(--dark-text);
         }
 
         /* Responsive Design */
@@ -500,6 +588,7 @@
                 <li><a href="#about">Giới thiệu</a></li>
                 <li><a href="#releases">Sản phẩm</a></li>
                 <li><a href="#artists">Nghệ sĩ</a></li>
+                <li><a href="#pronium">Pronium</a></li>
                 <li><a href="#library">Thư viện</a></li>
             </ul>
         </nav>
@@ -574,8 +663,72 @@
             <div class="artist-card">
                 <div class="artist-avatar"></div>
                 <h3 class="card-title">AN</h3>
-                <p style="color: var(--primary-blue); font-weight: 600; margin-bottom: 1rem; font-size: 0.9rem;">Main Vocal / Pop & Indie</p>
+                <p style="color: var(--primary-blue); font-weight: 400; margin-bottom: 1rem; font-size: 0.9rem;">Main Vocal / Pop & Indie</p>
                 <p style="color: var(--gray-text);">Giọng ca đầy năng lượng và cảm xúc, mang đến làn gió mới hiện đại cho các sản phẩm của Cloudlet Records.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pronium Section: Người dùng Pronium -->
+    <section id="pronium" class="container">
+        <div class="section-header">
+            <h2 class="section-title">Người Dùng Pronium</h2>
+            <p class="section-subtitle">Gói hội viên cao cấp dành riêng cho nhà sáng tạo, vlogger và nhãn hàng muốn sử dụng âm nhạc trọn gói.</p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; align-items: stretch;">
+            <!-- Thẻ giới thiệu Pronium -->
+            <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 24px; padding: 2.5rem; display: flex; flex-direction: column; justify-content: space-between; position: relative; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.02);">
+                <div style="position: absolute; top: 0; right: 0; background: linear-gradient(135deg, #1a73e8, #4285f4); color: white; font-size: 0.75rem; font-weight: 600; padding: 6px 20px; border-bottom-left-radius: 16px; text-transform: uppercase; letter-spacing: 0.5px;">
+                    VIP Member
+                </div>
+                <div>
+                    <span class="card-tag">Đặc quyền độc quyền</span>
+                    <h3 class="card-title" style="font-size: 1.8rem; margin-top: 0.5rem;">Pronium Pass</h3>
+                    <p style="color: var(--gray-text); margin-bottom: 1.5rem;">Trở thành hội viên đăng ký trả phí của Pronium để tận hưởng kho nhạc bản quyền độc quyền.</p>
+                    
+                    <ul style="list-style: none; margin-bottom: 2rem; display: flex; flex-direction: column; gap: 12px;">
+                        <li style="display: flex; align-items: center; gap: 10px; font-size: 0.95rem;">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1a73e8" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            <strong>Miễn phí 100%</strong> tải về toàn bộ kho nhạc Cloudlet
+                        </li>
+                        <li style="display: flex; align-items: center; gap: 10px; font-size: 0.95rem;">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1a73e8" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            Sử dụng thương mại không giới hạn (Không sợ Content ID)
+                        </li>
+                        <li style="display: flex; align-items: center; gap: 10px; font-size: 0.95rem;">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1a73e8" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            Nhận file âm thanh chất lượng cao WAV / Lossless
+                        </li>
+                        <li style="display: flex; align-items: center; gap: 10px; font-size: 0.95rem;">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1a73e8" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            Hỗ trợ pháp lý & cấp phép trực tiếp từ nghệ sĩ
+                        </li>
+                    </ul>
+                </div>
+                
+                <div style="border-top: 1px solid var(--border-color); padding-top: 1.5rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem;">
+                    <div>
+                        <span style="font-size: 1.5rem; font-weight: 600; color: var(--primary-blue);">199.000đ</span>
+                        <span style="color: var(--gray-text); font-size: 0.9rem;"> / tháng</span>
+                    </div>
+                    <button onclick="openProniumModal()" class="btn-primary" style="padding: 0.75rem 1.75rem;">Đăng ký ngay</button>
+                </div>
+            </div>
+
+            <!-- Quyền lợi chi tiết cho Người dùng Pronium -->
+            <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 24px; padding: 2.5rem; display: flex; flex-direction: column; justify-content: center;">
+                <span class="card-tag" style="background: #e6f4ea; color: #137333;">Tiện ích thông minh</span>
+                <h3 class="card-title" style="font-size: 1.5rem; margin-top: 0.5rem; margin-bottom: 1rem;">Đặc Quyền Thành Viên Pronium</h3>
+                <p style="color: var(--gray-text); margin-bottom: 1.5rem; line-height: 1.7;">
+                    Hệ sinh thái Pronium được thiết kế dành riêng cho các nhà sáng tạo nội dung chuyên nghiệp. Khi hoàn tất đăng ký hội viên Pronium trả phí, tài khoản của bạn sẽ được tự động đồng bộ với hệ thống của Cloudlet Records.
+                </p>
+                <div style="background: var(--bg-main); padding: 1.5rem; border-radius: 16px; border: 1px solid var(--border-color);">
+                    <p style="font-size: 0.9rem; color: var(--dark-text); font-weight: 500; margin-bottom: 0.5rem;">💡 Cơ chế hoạt động:</p>
+                    <p style="font-size: 0.88rem; color: var(--gray-text); line-height: 1.6;">
+                        Chỉ cần đăng nhập bằng tài khoản Pronium đã kích hoạt phí, mọi bản nhạc trên website sẽ mở khóa nút <strong>"Tải về miễn phí"</strong>, cấp phép hợp pháp để chèn vào video YouTube, TikTok, quảng cáo thương mại hoặc dự án cá nhân của bạn.
+                    </p>
+                </div>
             </div>
         </div>
     </section>
@@ -592,18 +745,21 @@
             <svg class="search-icon" viewBox="0 0 24 24">
                 <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
             </svg>
-            <input type="text" class="search-input" placeholder="Tìm kiếm bài hát, nghệ sĩ...">
+            <input type="text" id="video-search-input" class="search-input" placeholder="Tìm kiếm bài hát, video trong kênh...">
         </div>
 
-        <!-- Video Player Placeholder -->
-        <div class="video-wrapper">
+        <!-- Video Player Placeholder (Sẽ được API ghi đè khi có video) -->
+        <div class="video-wrapper" id="main-video-player">
             <div class="video-placeholder">
                 <svg viewBox="0 0 24 24"><path d="M10 16.5l6-4.5-6-4.5v9zM12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/></svg>
                 <h3>Kênh YouTube Đang Chuẩn Bị Lên Sóng</h3>
                 <p style="margin-top: 8px; color: #bdc1c6;">Video "Chạm Vào Nắng Mới" sẽ sớm được cập nhật tại đây.</p>
             </div>
-            <!-- Khi có video, bạn thay thế khối div.video-placeholder bằng iframe của YouTube -->
-            <!-- <iframe src="https://www.youtube.com/embed/VIDEO_ID" allowfullscreen></iframe> -->
+        </div>
+
+        <!-- Danh sách Video (Sẽ hiển thị khi kênh có nhiều hơn 1 video) -->
+        <div id="video-list" class="video-grid" style="display: none; margin-top: 2rem;">
+            <!-- JavaScript sẽ render video vào đây -->
         </div>
 
         <!-- Subscribe Call to Action -->
@@ -619,16 +775,201 @@
         </div>
     </section>
 
+    <!-- Copyright Policy Section -->
+    <section id="copyright" class="container" style="background-color: var(--bg-card); border-top: 1px solid var(--border-color);">
+        <div class="section-header">
+            <h2 class="section-title">Chính Sách Bản Quyền</h2>
+            <p class="section-subtitle">Thông tin về quyền sở hữu trí tuệ và quy định sử dụng các tác phẩm âm nhạc trực thuộc Cloudlet Records.</p>
+        </div>
+        <div class="legal-content">
+            <h3>1. Bảo hộ Quyền Sở Hữu Trí Tuệ</h3>
+            <p>Tất cả các bản ghi âm, video âm nhạc, hình ảnh nghệ sĩ, logo và nội dung văn bản hiển thị trên website này đều thuộc bản quyền hợp pháp của <strong>Cloudlet Records</strong> và các nghệ sĩ trực thuộc. Các tác phẩm này được bảo hộ toàn diện bởi Luật Sở hữu trí tuệ Việt Nam và các hiệp định bản quyền quốc tế.</p>
+            <p>Bất kỳ hành vi sao chép, phân phối, biểu diễn công khai hoặc phát sinh tác phẩm phái sinh nào mà không có sự đồng ý bằng văn bản của chúng tôi đều bị nghiêm cấm và có thể dẫn đến các hành động pháp lý.</p>
+
+            <h3>2. Hướng Dẫn Xin Cấp Phép & Sử Dụng Âm Nhạc</h3>
+            <p>Chúng tôi luôn hoan nghênh và hỗ trợ cộng đồng sáng tạo, tuy nhiên việc sử dụng âm nhạc cần tuân thủ các quy tắc sau:</p>
+            <ul>
+                <li><strong>Sử dụng phi thương mại trên Mạng xã hội:</strong> Người dùng có thể tự do sử dụng các đoạn nhạc của chúng tôi trên TikTok, Instagram Reels, YouTube Shorts thông qua <em>Thư viện âm thanh chính thức</em> được tích hợp sẵn trên các nền tảng này.</li>
+                <li><strong>Sử dụng thương mại & Đồng bộ hóa (Sync Licensing):</strong> Nếu bạn muốn sử dụng nhạc của Cloudlet Records cho mục đích thương mại (Quảng cáo, phim điện ảnh, trò chơi điện tử, sự kiện truyền thông), bạn <strong>bắt buộc phải xin Giấy phép đồng bộ hóa (Sync License) và Giấy phép bản ghi (Master License)</strong>. Vui lòng liên hệ trực tiếp với chúng tôi để thỏa thuận.</li>
+                <li><strong>Cover & Phối khí lại (Remix):</strong> Việc đăng tải các bản cover hoặc remix lên các nền tảng stream trả phí (như Spotify, Apple Music) yêu cầu phải có giấy phép từ nhà phát hành hoặc sự cho phép trực tiếp từ Cloudlet Records.</li>
+            </ul>
+
+            <h3>3. Chính Sách Content ID trên YouTube</h3>
+            <p>Chúng tôi bảo vệ quyền lợi của nghệ sĩ thông qua hệ thống YouTube Content ID. Khi bạn đăng tải một video có sử dụng bản ghi âm của Cloudlet Records mà không có thỏa thuận trước:</p>
+            <ul>
+                <li>Hệ thống có thể tự động gửi <strong>Xác nhận bản quyền (Copyright Claim)</strong> vào video của bạn.</li>
+                <li>Điều này <strong>không phải</strong> là Cảnh cáo vi phạm bản quyền (Copyright Strike) và hoàn toàn không ảnh hưởng xấu đến trạng thái kênh YouTube của bạn.</li>
+                <li>Tuy nhiên, quyền kiếm tiền từ video đó có thể được chuyển hướng về Cloudlet Records (đại diện cho chủ sở hữu bản quyền).</li>
+            </ul>
+
+            <h3>4. Thông Báo Vi Phạm (DMCA) & Liên Hệ Pháp Lý</h3>
+            <p>Nếu bạn tin rằng bất kỳ nội dung nào trên hệ thống của Cloudlet Records đang vi phạm quyền sở hữu trí tuệ của bạn, vui lòng gửi thông báo bằng văn bản đến bộ phận pháp lý của chúng tôi. Thông báo cần bao gồm bằng chứng chứng minh quyền sở hữu và đường dẫn đến nội dung bị cho là vi phạm.</p>
+            <p>Mọi yêu cầu cấp phép bản quyền hoặc báo cáo vi phạm, xin vui lòng liên hệ:</p>
+            <p>Email: <strong>legal@cloudletrecords.com</strong></p>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer>
         <div class="footer-logo">CLOUDLET RECORDS</div>
         <div class="footer-links">
             <a href="#about">Về chúng tôi</a>
             <a href="#releases">Sản phẩm</a>
+            <a href="#pronium">Pronium</a>
+            <a href="#copyright">Chính sách bản quyền</a>
             <a href="mailto:contact@cloudletrecords.com">Liên hệ</a>
         </div>
         <p style="font-size: 0.9rem;">© 2026 CLOUDLET RECORDS. All Rights Reserved.</p>
     </footer>
 
+    <!-- Custom Modal đăng ký Pronium (Thay thế alert) -->
+    <div id="pronium-modal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); backdrop-filter: blur(5px); z-index: 2000; justify-content: center; align-items: center; padding: 1rem;">
+        <div style="background: var(--bg-card); max-width: 450px; width: 100%; padding: 2.5rem; border-radius: 24px; box-shadow: 0 20px 40px rgba(0,0,0,0.2); position: relative; text-align: center;">
+            <button onclick="closeProniumModal()" style="position: absolute; top: 20px; right: 20px; background: none; border: none; font-size: 1.2rem; cursor: pointer; color: var(--gray-text);">✕</button>
+            <div style="width: 50px; height: 50px; background: #e8f0fe; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1a73e8" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            </div>
+            <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem;">Đăng Ký Gói Pronium</h3>
+            <p style="color: var(--gray-text); font-size: 0.95rem; margin-bottom: 1.5rem;">Nhập email của bạn để kết nối tài khoản Pronium và bắt đầu sử dụng nhạc miễn phí ngay lập tức.</p>
+            <input type="email" id="pronium-email-input" placeholder="Nhập email tài khoản Pronium..." style="width: 100%; padding: 14px 20px; border: 1px solid var(--border-color); border-radius: 50px; font-family: 'Raleway', sans-serif; font-size: 0.95rem; outline: none; margin-bottom: 1rem;">
+            <button onclick="submitProniumRegister()" class="btn-primary" style="width: 100%; justify-content: center;">Xác nhận kích hoạt</button>
+            <p id="pronium-success-msg" style="margin-top: 1rem; font-size: 0.9rem; color: #137333; display: none;">🎉 Đăng ký thành công! Kho nhạc đã được mở khóa miễn phí cho bạn.</p>
+        </div>
+    </div>
+
+    <script>
+        // Điều khiển Modal Pronium
+        function openProniumModal() {
+            document.getElementById('pronium-modal').style.display = 'flex';
+        }
+        function closeProniumModal() {
+            document.getElementById('pronium-modal').style.display = 'none';
+            document.getElementById('pronium-success-msg').style.display = 'none';
+            document.getElementById('pronium-email-input').value = '';
+        }
+        function submitProniumRegister() {
+            const emailInput = document.getElementById('pronium-email-input').value.trim();
+            if(!emailInput || !emailInput.includes('@')) {
+                alert('Vui lòng nhập email hợp lệ!');
+                return;
+            }
+            document.getElementById('pronium-success-msg').style.display = 'block';
+            setTimeout(() => {
+                closeProniumModal();
+            }, 2500);
+        }
+
+        // Cấu hình API
+        const YOUTUBE_API_KEY = 'AIzaSyDRnZqD-yyK3Uf6tLu7I6cColBmQRaZP68';
+        const YOUTUBE_HANDLE = '@CLOUDLETSOUND';
+        let allVideos = []; // Lưu trữ video để thực hiện tính năng tìm kiếm
+
+        // Hàm chính để tải video từ kênh
+        async function fetchYouTubeVideos() {
+            try {
+                // Bước 1: Tìm Channel ID dựa trên Handle của kênh (Sử dụng endpoint channels để lấy chính xác tuyệt đối)
+                const channelUrl = `https://www.googleapis.com/youtube/v3/channels?part=id&forHandle=${encodeURIComponent(YOUTUBE_HANDLE)}&key=${YOUTUBE_API_KEY}`;
+                const channelResponse = await fetch(channelUrl);
+                const channelData = await channelResponse.json();
+
+                if (!channelData.items || channelData.items.length === 0) {
+                    console.log('Chưa tìm thấy kênh YouTube hoặc kênh chưa public.');
+                    return; // Giữ nguyên giao diện "Đang chuẩn bị lên sóng"
+                }
+
+                // Với API channels, ID được trả về trực tiếp dưới dạng string
+                const channelId = channelData.items[0].id;
+
+                // Bước 2: Lấy danh sách video mới nhất từ Channel ID vừa tìm được
+                const searchVideosUrl = `https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=${channelId}&order=date&type=video&maxResults=7&key=${YOUTUBE_API_KEY}`;
+                const videosResponse = await fetch(searchVideosUrl);
+                const videosData = await videosResponse.json();
+
+                if (videosData.items && videosData.items.length > 0) {
+                    allVideos = videosData.items; // Lưu lại để dùng cho thanh tìm kiếm
+                    renderVideos(allVideos);
+                } else {
+                    console.log('Kênh chưa có video nào được đăng tải.');
+                    // Giữ nguyên placeholder
+                }
+            } catch (error) {
+                console.error('Lỗi khi tải dữ liệu từ YouTube API:', error);
+            }
+        }
+
+        // Hàm render video ra giao diện
+        function renderVideos(videos) {
+            const mainPlayer = document.getElementById('main-video-player');
+            const videoList = document.getElementById('video-list');
+            
+            if (videos.length === 0) {
+                videoList.style.display = 'none';
+                return;
+            }
+
+            // Đưa video mới nhất (hoặc video đầu tiên) lên khung trình phát chính
+            const latestVideo = videos[0];
+            mainPlayer.innerHTML = `<iframe src="https://www.youtube.com/embed/${latestVideo.id.videoId}?autoplay=0" allowfullscreen></iframe>`;
+
+            // Nếu có nhiều video, hiển thị danh sách lưới bên dưới
+            if (videos.length > 1) {
+                videoList.style.display = 'grid';
+                let listHtml = '';
+                
+                // Bỏ qua video đầu tiên (index 0) vì đã hiển thị ở trên
+                for (let i = 1; i < videos.length; i++) {
+                    const video = videos[i];
+                    // Giải mã các ký tự HTML (ví dụ: &amp; thành &)
+                    const title = document.createElement("textarea");
+                    title.innerHTML = video.snippet.title;
+                    
+                    listHtml += `
+                        <div class="video-item" onclick="changeMainVideo('${video.id.videoId}')">
+                            <img src="${video.snippet.thumbnails.medium.url}" alt="Thumbnail" class="video-thumbnail">
+                            <div class="video-info">
+                                <h4>${title.value}</h4>
+                                <p>${new Date(video.snippet.publishedAt).toLocaleDateString('vi-VN')}</p>
+                            </div>
+                        </div>
+                    `;
+                }
+                videoList.innerHTML = listHtml;
+            } else {
+                videoList.style.display = 'none';
+            }
+        }
+
+        // Hàm thay đổi video khi người dùng click vào thumbnail
+        window.changeMainVideo = function(videoId) {
+            const mainPlayer = document.getElementById('main-video-player');
+            // Thêm autoplay=1 để tự động phát khi click
+            mainPlayer.innerHTML = `<iframe src="https://www.youtube.com/embed/${videoId}?autoplay=1" allow="autoplay; encrypted-media" allowfullscreen></iframe>`;
+            
+            // Tự động cuộn lên vị trí của khung phát video
+            document.getElementById('main-video-player').scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+
+        // Xử lý thanh tìm kiếm (Tìm kiếm trong phạm vi video đã tải về)
+        const searchInput = document.getElementById('video-search-input');
+        if(searchInput) {
+            searchInput.addEventListener('input', function(e) {
+                const keyword = e.target.value.toLowerCase();
+                if(allVideos.length > 0) {
+                    const filteredVideos = allVideos.filter(video => 
+                        video.snippet.title.toLowerCase().includes(keyword)
+                    );
+                    
+                    // Cập nhật lại danh sách video hiển thị
+                    if(filteredVideos.length > 0) {
+                        // Đưa video đầu tiên tìm được lên khung to, các video còn lại xuống dưới
+                        renderVideos(filteredVideos);
+                    }
+                }
+            });
+        }
+
+        // Kích hoạt hàm gọi API khi HTML vừa tải xong
+        document.addEventListener('DOMContentLoaded', fetchYouTubeVideos);
+    </script>
 </body>
 </html>
